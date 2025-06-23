@@ -15,7 +15,7 @@ create_rfq_task:
 evaluate_carrier_task:  
   description: >  
     Assess available carriers for shipping {material} to {location}.  
-    Analyze carrier data in the provided CSV file to evaluate performance data, 
+    Analyze carrier data only in the provided CSV file to evaluate performance data, 
     compliance history, and cost to select the best partner.  
   expected_output: >  
     A list with ratings and justifications for at least 3 top carriers, including:  
@@ -25,5 +25,5 @@ evaluate_carrier_task:
       - Cost comparison  
       - Final recommendation with reasoning  
   agent: carrier_evaluator
-  output_file: carrier_report.md  
+  output_file: carrier_report.md
 

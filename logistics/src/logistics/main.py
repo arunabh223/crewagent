@@ -19,7 +19,7 @@ def run():
     """
     inputs = {
         'material': 'Insulin',
-        'location': 'EU'
+        'location': 'Phoenix'
     }
     
     try:

@@ -8,7 +8,7 @@ from crewai_tools import FileReadTool
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 # Define the tools
-file_reader_tool = FileReadTool(file_path="logistics/knowledge/carrier_data.csv") 
+file_reader_tool = FileReadTool(file_path='knowledge/carrier_data.csv') 
 
 @CrewBase
 class Logistics():
@@ -35,7 +35,7 @@ class Logistics():
         return Agent(
             config=self.agents_config['carrier_evaluator'], # type: ignore[index]
             verbose=True,
-            tool = file_reader_tool
+            tools=[file_reader_tool]
         )
 
     # To learn more about structured task outputs,
@@ -51,7 +51,7 @@ class Logistics():
     def evaluate_carrier_task(self) -> Task:
         return Task(
             config=self.tasks_config['evaluate_carrier_task'], # type: ignore[index]
-            output_file='report.md'
+            output_file='carrier_report.md'
         )
 
     @crew

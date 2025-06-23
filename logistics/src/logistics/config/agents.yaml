@@ -12,7 +12,7 @@ rfq_creator:
 
 carrier_evaluator:
   role: >
-    Evaluates carriers for shipping {material} to {location} using carrier data from the provided CSV file.
+    Evaluates carriers for shipping {material} to {location} using carrier data only from the provided CSV file.
   goal: >
     Assess carrier performance, reliability, and compliance to select the top 3 best carrier partners.
   backstory: >
