@@ -37,3 +37,5 @@ def create_carrier_scorecard(file_path: str) -> pd.DataFrame:
 if __name__ == "__main__":
     scorecard = create_carrier_scorecard(filepath)
     print(scorecard.head())
+    # Save the scorecard to a new CSV file
+    scorecard.to_csv("logistics/knowledge/carrier_scorecard.csv", index=False)
